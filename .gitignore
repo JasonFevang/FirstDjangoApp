@@ -1,2 +1,7 @@
 # idea directory
 /.idea/
+
+# __pycache__ directories are uneeded
+/mysite/polls/__pycache__/
+/mysite/polls/migrations/__pycache__/
+/mysite/mysite/__pycache__/

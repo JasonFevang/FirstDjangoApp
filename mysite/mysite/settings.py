@@ -31,11 +31,12 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'django.contrib.admin',
-    'django.contrib.auth',
-    'django.contrib.contenttypes',
-    'django.contrib.sessions',
-    'django.contrib.messages',
+    'polls.apps.PollsConfig',
+    'django.contrib.admin', # needed for \admin\ page to load template
+    'django.contrib.auth', # needed for python manage.py createsuperuser
+    'django.contrib.contenttypes', # Needed otherwise makemigration and migrate don't work
+    'django.contrib.sessions', # needed for \admin\ page after login to load
+    'django.contrib.messages', # this one or the next or both are needed for CSS to load on admin page
     'django.contrib.staticfiles',
 ]
 
@@ -75,8 +76,12 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'firstdb',
+        'HOST': '',
+        'PASSWORD': 'SubAvepwd',
+        'PORT': 3306,
+        'USER': 'root',
     }
 }
 
