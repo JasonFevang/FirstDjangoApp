@@ -32,11 +32,11 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'polls.apps.PollsConfig',
-    'django.contrib.admin', # needed for \admin\ page to load template
-    'django.contrib.auth', # needed for python manage.py createsuperuser
-    'django.contrib.contenttypes', # Needed otherwise makemigration and migrate don't work
-    'django.contrib.sessions', # needed for \admin\ page after login to load
-    'django.contrib.messages', # this one or the next or both are needed for CSS to load on admin page
+    'django.contrib.admin',  # needed for \admin\ page to load template
+    'django.contrib.auth',  # needed for python manage.py createsuperuser
+    'django.contrib.contenttypes',  # Needed otherwise makemigration and migrate don't work
+    'django.contrib.sessions',  # needed for \admin\ page after login to load
+    'django.contrib.messages',  # this one or the next or both are needed for CSS to load on admin page
     'django.contrib.staticfiles',
 ]
 
