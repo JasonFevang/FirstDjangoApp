@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',  # Needed otherwise makemigration and migrate don't work
     'django.contrib.sessions',  # needed for \admin\ page after login to load
     'django.contrib.messages',  # this one or the next or both are needed for CSS to load on admin page
-    'django.contrib.staticfiles',
+    'django.contrib.staticfiles',  # used to manage static files
 ]
 
 MIDDLEWARE = [
@@ -55,7 +55,7 @@ ROOT_URLCONF = 'mysite.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
